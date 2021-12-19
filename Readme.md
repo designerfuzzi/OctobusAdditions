@@ -23,3 +23,4 @@ If you cant receive from your Octatrack it will still work, but the params dont 
 Switching Patterns and Banks not included yet and so also the parameter request for this case is not included yet.
 
 Cheers.
+<img width="1022" alt="TouchOSC Layout Image" src="https://user-images.githubusercontent.com/1221499/146667280-d28bc923-7282-4fe3-8be6-5a8f9f23b8f7.png">
