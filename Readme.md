@@ -17,8 +17,6 @@ Which means you can request the Patterns values with CC61 and get feedback start
 The layout allows SCENE switching for SCENE A from 1..8 and for SCENE B from 9..16, <br>
 they are send as momentary midi signal, means you can slide thru them and hear the difference and SCENE B cant select SCENE 1 and SCENE A cant select SCENE 9 and so on.. this limits your possiblities but keeps the layout somewhat useable. You could change this via the editor.
 
-**consider contributing when you improve it, please.**
-
 ~~OSC addresses are not complete yet~~. complete!<br>
 The layout sends all osc values in a scheme of the following structure.
 ```
@@ -85,3 +83,6 @@ Switching Patterns and Banks is not included yet.
 Reminder: parameters of Midi tracks do not answer on request CC61.
 
 <img width="1025" alt="TouchOSC octatrack simple midi layout" src="https://user-images.githubusercontent.com/1221499/146930038-6468ce7a-d598-4c9c-a881-57c5b1c76258.png">
+
+
+**consider contributing when you improve it, please.**
