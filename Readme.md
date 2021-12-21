@@ -11,17 +11,26 @@ how to:
    <br>**Example:** When you have some sequenced MIDI track sending notes to CH1 **and** Audio Track 1 is also acting on behalf of CH1 (i.e. from some external midi controller) then CC48 will try to send the next available non-counterpart'ed Channel, in this case CH2 and the Data Dump from Audio Track 1 will not be send out on request. If there is additional some MIDI Track given to send also on CH2, then the Crossfader from the next Audio Track will be send which could be CH3 as well as the Data Dump will be ignored of this Audio CH2. 
 7) hit play, enjoy.
 
-works bidirectional. Received Midi signals in TouchOSC will show up their values in the running sheet.<br>
-Which means you can request the Patterns values with CC61 and get feedback starting with CC16 up to CC56.
+How it works?<br>
+**works bidirectional.** Received Midi signals in TouchOSC will show up their values in the running sheet.<br>
+Which means you can request the Patterns values with CC61 and get feedback starting with CC16 up to CC56.<br>
+Because TouchOSC will map the incomming data to the controls with the same midi values the dumped data appears as sheet update showing the momentary values.<br>
+leading to the idea that you can request the values after a pattern or bank switch.
 
 The layout allows SCENE switching for SCENE A from 1..8 and for SCENE B from 9..16, <br>
-they are send as momentary midi signal, means you can slide thru them and hear the difference and SCENE B cant select SCENE 1 and SCENE A cant select SCENE 9 and so on.. this limits your possiblities but keeps the layout somewhat useable. You could change this via the editor.
+they are send as momentary midi signal, means you can slide thru them and hear the difference.
+In this layout SCENE B cant select SCENE 1 and SCENE A cant select SCENE 9 and so on.. <br>
+this limits your possiblities but keeps the layout somewhat useable. You could change this via the editor.
 
 ~~OSC addresses are not complete yet~~. complete!<br>
-The layout sends all osc values in a scheme of the following structure.
+The layout sends also each control value as OSC value in a scheme of the following structure.
 ```
 /t1
+```
+where `t1` could be `t2`, `t3`, `t4`, `t5`, `t6`, `t7`, `t8` and correspond to the Audio Track T1 to T8.
+Above value expresses selected Track is 1. As this works bidirectional this also means when TouchOSC receives `/t2` it will switch to page 2.
 
+```
 /t1/mute f 0.0
 /t1/vol f 0.0
 /t1/cue f 0.0
@@ -61,7 +70,7 @@ The layout sends all osc values in a scheme of the following structure.
 /t1/fx2/param5 f 0.0
 /t1/fx2/param6 f 0.0
 ```
-where `t1` could be `t2`, `t3`, `t4`, `t5`, `t6`, `t7`, `t8`
+
 
 and in general
 ```
