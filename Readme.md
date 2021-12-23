@@ -27,13 +27,13 @@ The layout sends also each control value as OSC value in a scheme of the followi
 ```
 /t1
 ```
-where `t1` could be `t2`, `t3`, `t4`, `t5`, `t6`, `t7`, `t8` and correspond to the Audio Track T1 to T8.
-Above value expresses selected Track is 1. As this works bidirectional this also means when TouchOSC receives `/t2` it will switch to page 2.
+As this works bidirectional this also means when TouchOSC receives `/t2` it will switch to page 2.
 
 ```
 /t1/mute f 0.0
 /t1/vol f 0.0
 /t1/cue f 0.0
+/t1/cued f 0.0
 
 /t1/src/ptch f 0.0
 /t1/src/strt f 0.0
@@ -70,14 +70,24 @@ Above value expresses selected Track is 1. As this works bidirectional this also
 /t1/fx2/param5 f 0.0
 /t1/fx2/param6 f 0.0
 ```
+where `t1` could be `t2`, `t3`, `t4`, `t5`, `t6`, `t7`, `t8` and correspond to the Audio Track T1 to T8.
+Above value expresses selected Track is 1. 
 
 
-and in general
+in general without track assignment the following
 ```
 /crossfader f 0.0
 /scene_a i 0
 /scene_b i 8
 ```
+
+for MIDI params
+```
+/midi/mute/t1 f 0.0
+```
+midi track parameter start with `/midi` following their function name and assigned track
+
+
 `i` + `f` represent the used *tag* indicting the type of send OSC data, <br>
 int between [0..127] and float between [0.0 .. 1.0] <br>
 or no tag and according also no data for selected pages 
