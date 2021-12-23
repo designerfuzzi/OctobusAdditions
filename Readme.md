@@ -78,9 +78,14 @@ and in general
 /scene_a i 0
 /scene_b i 8
 ```
+`i` + `f` represent the used *tag* indicting the type of send OSC data, <br>
+int between [0..127] and float between [0.0 .. 1.0] <br>
+or no tag and according also no data for selected pages 
+example:`/t5` == page of Track 5
 
-**T1** to **T8** correspond to Midi Channels **1 to 8**, *no Autochannel used!*. <br>
+**T1** to **T8** correspond to Midi Channels **1 to 8**<br>
 So you can control directly if your Octatrack uses 1..8 for its audio controls.<br>
+~~*no Autochannel used!*.~~ AutoChannel (CH9) used for sending Bank + Pattern switch via MIDIProgramChange message.
 
 Selecting ~~T1, T2, Tx~~, **REQUEST** ... will trigger a request data dump via midi CC61 of all parameters<br>
 As this cant be limited to just one channel, the data is quite large (40signals * 8 Channels = 320 commands) you could potentially hear a slow down when your session is running, so use it wisely. One time data request doesnt hurt.
@@ -91,7 +96,6 @@ Switching Patterns and Banks is not included yet.
 
 Reminder: parameters of Midi tracks do not answer on request CC61.
 
-<img width="1025" alt="TouchOSC octatrack simple midi layout" src="https://user-images.githubusercontent.com/1221499/146930038-6468ce7a-d598-4c9c-a881-57c5b1c76258.png">
-
+<img width="1112" alt="TouchOSC octatrack simple midi layout" src="https://user-images.githubusercontent.com/1221499/147226249-26405c56-8e27-4fda-8be6-fe18f6a93d5b.png">
 
 **consider contributing when you improve it, please.**
