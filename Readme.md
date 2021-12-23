@@ -27,6 +27,7 @@ The layout sends also each control value as OSC value in a scheme of the followi
 ```
 /t1
 ```
+Above value expresses selected Track is 1. <br>
 As this works bidirectional this also means when TouchOSC receives `/t2` it will switch to page 2.
 
 ```
@@ -71,8 +72,6 @@ As this works bidirectional this also means when TouchOSC receives `/t2` it will
 /t1/fx2/param6 f 0.0
 ```
 where `t1` could be `t2`, `t3`, `t4`, `t5`, `t6`, `t7`, `t8` and correspond to the Audio Track T1 to T8.
-Above value expresses selected Track is 1. 
-
 
 in general without track assignment the following
 ```
@@ -90,8 +89,8 @@ midi track parameter start with `/midi` following their function name and assign
 
 `i` + `f` represent the used *tag* indicting the type of send OSC data, <br>
 int between [0..127] and float between [0.0 .. 1.0] <br>
-or no tag and according also no data for selected pages 
-example:`/t5` == page of Track 5
+or no tag and according also no data for selected pages<br> 
+example: `/t5` == page of Track 5
 
 **T1** to **T8** correspond to Midi Channels **1 to 8**<br>
 So you can control directly if your Octatrack uses 1..8 for its audio controls.<br>
