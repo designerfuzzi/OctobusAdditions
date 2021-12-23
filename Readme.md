@@ -98,4 +98,4 @@ Reminder: parameters of Midi tracks do not answer on request CC61.
 
 <img width="1112" alt="TouchOSC octatrack simple midi layout" src="https://user-images.githubusercontent.com/1221499/147226249-26405c56-8e27-4fda-8be6-fe18f6a93d5b.png">
 
-**consider contributing when you improve it, please.**
+**consider contributing your changed layout when you improve it.**
