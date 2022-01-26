@@ -101,10 +101,10 @@ As this cant be limited to just one channel, the data is quite large (40signals 
 
 If you cant receive from your Octatrack it will still work, but the params dont show their real state in the sheet if you switched a pattern in example.<br>
 
-Switching Patterns and Banks is not included yet.
+Switching Patterns and Banks is ~~not included yet~~ included. You can switch banks and keep the pattern or patterns alone or both. Meaning you can traverse thru your liveset in any way. 
 
 Reminder: parameters of Midi tracks do not answer on request CC61.
 
 <img width="1112" alt="TouchOSC octatrack simple midi layout" src="https://user-images.githubusercontent.com/1221499/147226249-26405c56-8e27-4fda-8be6-fe18f6a93d5b.png">
 
-**consider contributing your changed layout when you improve it.**
+**consider contributing by forking and uploading your changed layout when you improve it.**
